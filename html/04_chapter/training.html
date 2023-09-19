@@ -1,0 +1,166 @@
+Full Stack Dave Gray
+https://www.youtube.com/watch?v=mJgBOIoGihA
+https://www.youtube.com/@DaveGrayTeachesCode
+
+MERN
+https://www.youtube.com/watch?v=CvCiNeLnZ00
+
+Ansible
+https://www.youtube.com/watch?v=teEhLgHpGgo&list=PLT98CRl2KxKEUHie1m24-wkyHpEsa4Y70&index=11
+
+Now running
+https://www.youtube.com/watch?v=IluhOk86prA
+
+Git Hub
+https://www.youtube.com/watch?v=kJaIYx5tHOI
+
+Login Form
+https://www.youtube.com/watch?v=3GsKEtBcGTk
+
+Full stack playlist
+https://www.youtube.com/watch?v=KqJikDzb3l4&list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg&index=8
+
+Devops -codelit
+https://www.youtube.com/watch?v=FE_Lb0c58Hk&list=PLUU3EzfPr916YHjJD8_ItEpXaBr8PvB5m&index=1
+
+AWS
+https://www.youtube.com/watch?v=rzsyj1x54AU&list=PLLu1bCv5AByGUZUl4N2fhZdtHg0pd7G8E&index=2
+
+Jenkins
+https://www.youtube.com/watch?v=c-OZcpHiOPc&list=PL87padGs1bp9X95IxGQtFW44qWzywhbHM
+
+
+
+
+
+<h1>Full Stack Videos</h1>
+
+<p>HTML Full<a href="https://www.youtube.com/watch?v=mJgBOIoGihA" target="_blank"> by Dave Gray</a></p>
+<br>
+<p>Full Stack Dave Gray<a href="https://www.youtube.com/@DaveGrayTeachesCode" target="_blank"> What</a></p>
+<hr>
+
+
+<p>Mithun Technologies <a href="https://www.youtube.com/watch?v=IluhOk86prA" target="_blank">freeCodeCamp</a>.</p>
+
+<p>Devops -codelit <a href="https://www.youtube.com/watch?v=FE_Lb0c58Hk&list=PLUU3EzfPr916YHjJD8_ItEpXaBr8PvB5m&index=1" target="_blank">freeCodeCamp</a>.</p>
+Devops -codelit
+https://www.youtube.com/watch?v=FE_Lb0c58Hk&list=PLUU3EzfPr916YHjJD8_ItEpXaBr8PvB5m&index=1
+
+AWS
+https://www.youtube.com/watch?v=rzsyj1x54AU&list=PLLu1bCv5AByGUZUl4N2fhZdtHg0pd7G8E&index=2
+
+Jenkins
+https://www.youtube.com/watch?v=c-OZcpHiOPc&list=PL87padGs1bp9X95IxGQtFW44qWzywhbHM
+
+Login Form
+https://www.youtube.com/watch?v=3GsKEtBcGTk
+
+Full stack playlist
+https://www.youtube.com/watch?v=KqJikDzb3l4&list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg&index=8
+
+build machine
+-------------
+cd code-repo
+git init --bare
+
+dev John machine
+----------------
+git clone devops@192.168.1.2:/home/devops/code-repo
+git branch -v
+git status
+git checkout -b master ++Create New branch
+git checkout -b ticket2 ++Create New branch, if created it will switch
+
+The git add command adds files to the staging area whereas the git commit command will write changes to the repository permanently.
+
+git add lib.js ++Add file to git, so that it will track changes, if file is modified use git add again
+vi  lib.js
+git add lib.js ++Add file to git, so that it will track changes, if file is modified use git add again
+
+The “git commit” command is one of the important commands of Git that saves the current staged changes of the project into the Git local repository. However, the “git push” command is utilized to push the local repository committed changes to the remote repository.
+
+git commit -m "Ticket #2: Added adder function"
+devops@dev:~/code-repo$ git config --global user.email "dev@devops.com" 
+devops@dev:~/code-repo$ git config --global user.name "devopsATdev"
+git commit -m "Ticket #2: Added adder function"
+git remote -v
+git push -u origin ticket2
+
+rudradev devops machine
+-----------------------
+git clone devops@192.168.1.2:/home/devops/code-repo -> To start on new machine First CLONE
+cd code-repo
+git checkout ticket2 -> Get branch ticket2
+git pull origin ticket2
+
+  229  git checkout -b ticket3
+    230  git branch
+      231  git branch -v
+        232  ls
+	  233  git log --all
+	    234  git branch
+	      236  vi server.js
+	        237  git status
+		  238  git add .
+		    239  git status -sb
+		      240  git commit -m "Ticket3 v1"
+		        241  git config --global user.email "rudradev@devops.com"
+			  242  git config --global user.name "rudradev"
+			    243  git commit -m "Ticket3 v1"
+			      244  git push -u origin ticket3
+			        245  ls -lrt
+				  246  git status -sb
+				    247  git status
+				      248  git branch
+				        249  git checkout ticket2
+					  250  ls -lrt
+					    251  git checkout ticket3
+					      252  ls -lrt
+					        253  git checkout ticket2
+						  254  ls -lrt
+						    259  git branch -b master
+						      260  git checkout -b master
+						        261  ls
+							  262  cat t2_lib.js
+							    263  git checkout ticket2
+							      264  ls -lrt
+							        265  git checkout -b master
+								  266  git checkout  master
+								    267  ls -lrt
+								      268  git status -v
+								        269  git status
+									  270  git branch -v
+									    271  git merge ticket3
+									      272  git branch -v
+									      git log --all --oneline --graph
+
+									      on dev machine
+									      ==============
+									        245  git clone devops@192.168.1.7:/home/devops/code-repo
+										  246  git checkout master
+										    247  cd code-repo/
+										      248  git checkout master
+										        249  ls -lrt
+											  250  git checkout ticket2
+											    251  ls -lrt
+											      252  git checkout ticket3
+											        253  ls -lrt
+												  254  vi server.js
+												    255  git status
+												      256  git add server.js
+												        257  git status
+													  258  git checkout master
+													    259  git status
+													      260  git checkout master
+													        261  git reset HEAD server.js
+														  262  cat server.js
+														    263  git checkout master
+														      264  git stash
+														        265  git checkout master
+															  266  git checkout ticket3
+															    267  git checkout master
+															      268  ls -lrt
+269  vi server.js
+270  git add .
+271  git
